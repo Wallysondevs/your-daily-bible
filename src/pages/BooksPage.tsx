@@ -22,14 +22,14 @@ const BooksPage = () => {
         <p className="mb-6 text-muted-foreground">66 livros organizados por testamento e categoria</p>
 
         {/* Filter */}
-        <div className="mb-8 flex gap-2">
+        <div className="mb-8 flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide">
           {([["all", "Todos"], ["old", "Antigo Testamento"], ["new", "Novo Testamento"]] as const).map(([key, label]) => (
             <Button
               key={key}
               variant={filter === key ? "default" : "outline"}
               size="sm"
               onClick={() => setFilter(key)}
-              className="rounded-full"
+              className="rounded-full whitespace-nowrap flex-shrink-0"
             >
               {label}
             </Button>
