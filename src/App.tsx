@@ -22,16 +22,18 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/books" element={<BooksPage />} />
-          <Route path="/book/:bookId" element={<BookDetailPage />} />
-          <Route path="/read/:bookId/:chapter" element={<ReadingPage />} />
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="/favorites" element={<FavoritesPage />} />
-          <Route path="/devotional" element={<DevotionalPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <main className="pb-20 md:pb-0">
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/books" element={<BooksPage />} />
+            <Route path="/book/:bookId" element={<BookDetailPage />} />
+            <Route path="/read/:bookId/:chapter" element={<ReadingPage />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
+            <Route path="/devotional" element={<DevotionalPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
