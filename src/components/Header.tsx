@@ -14,7 +14,7 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl overflow-hidden">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg gradient-primary">
